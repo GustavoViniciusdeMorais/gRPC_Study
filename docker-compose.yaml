@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    gogus:
+        build:
+            context: .
+            dockerfile: go.dockerfile
+        ports:
+            - 8082:9990
+        volumes:
+            - ./:/go
+        networks:
+          gus-go-network:
+            ipv4_address: 172.16.0.2
+
+networks:
+    gus-go-network:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: "172.16.0.0/16"
