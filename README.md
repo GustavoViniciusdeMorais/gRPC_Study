@@ -3,6 +3,7 @@
 Created by: Gustavo Morais
 
 https://grpc.io/
+https://grpc.io/docs/languages/go/basics/
 
 ### What is?
 gRPC is a type of request response API approach that
@@ -21,3 +22,15 @@ The server builds the communication channel specifying the host and port.
 The data can be sent and received as streams of data or single requests.
 
 stopped at build c++ grpc example with already built git examples
+
+### Go Config
+```
+apt update
+apt install -y protobuf-compiler
+apt install -y curl
+curl -OL https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
+sha256sum go1.16.7.linux-amd64.tar.gz
+tar -C /usr/local -xvf go1.16.7.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+go version
+```

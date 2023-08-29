@@ -13,11 +13,24 @@ services:
     #       gus-go-network:
     #         ipv4_address: 172.16.0.2
     
-    gogus:
+    # gogus:
+    #     build:
+    #         context: .
+    #         dockerfile: cplus.dockerfile
+    #     container_name: cplus
+    #     ports:
+    #         - 80:80
+    #     volumes:
+    #         - ./:/var/www/html
+    #     networks:
+    #       gus-go-network:
+    #         ipv4_address: 172.16.0.2
+
+    gusunix:
         build:
             context: .
-            dockerfile: cplus.dockerfile
-        container_name: cplus
+            dockerfile: ubuntu.dockerfile
+        container_name: gusunix
         ports:
             - 80:80
         volumes:
